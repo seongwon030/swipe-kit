@@ -133,20 +133,43 @@ def s_feature(d, ctx, i):
 
 
 def s_steps(d, ctx, i):
-    steps = d.get("steps", [])[:4]
-    if len(steps) < 2:
-        raise ValueError("steps: needs 2-4 steps")
-    lst = "".join(f'<div class="step"><div class="n">{k + 1:02d}</div><div><b data-fit>{esc(s["title"])}</b>'
+    steps = d.get("steps", [])
+    if not 2 <= len(steps) <= 4:
+        raise ValueError("steps: needs 2-4 steps (split longer sequences across slides with \"start\")")
+    n0 = int(d.get("start", 1))
+    lst = "".join(f'<div class="step"><div class="n">{k + n0:02d}</div><div><b data-fit>{esc(s["title"])}</b>'
                   f'<span data-fit>{esc(s.get("desc"))}</span></div></div>' for k, s in enumerate(steps))
     return f'''<div class="slide s-light steps">{chrome(ctx, i)}
 <div class="region top"><h2 class="disp" data-fit>{esc(d["title"])}</h2></div>
 <div class="region list">{lst}</div></div>'''
 
 
+def s_list(d, ctx, i):
+    items = d.get("items", [])
+    if not 2 <= len(items) <= 5:
+        raise ValueError("list: needs 2-5 items (split longer lists across slides)")
+    lst = ""
+    for it in items:
+        desc = f'<span data-fit>{esc(it.get("desc"))}</span>' if it.get("desc") else ""
+        val = f'<div class="v" data-fit>{esc(it.get("value"))}</div>' if it.get("value") else ""
+        lst += f'<div class="row"><div><b data-fit>{esc(it["title"])}</b>{desc}</div>{val}</div>'
+    return f'''<div class="slide s-light list">{chrome(ctx, i)}
+<div class="region top"><h2 class="disp" data-fit>{esc(d["title"])}</h2></div>
+<div class="region rows">{lst}</div></div>'''
+
+
+def s_photo(d, ctx, i):
+    sub = f'<p class="sub" data-fit>{esc(d.get("subtitle"))}</p>' if d.get("subtitle") else ""
+    return f'''<div class="slide s-light photo">{chrome(ctx, i)}
+<div class="region"><h2 class="disp" data-fit>{esc(d["title"])}</h2>{sub}</div>
+<div class="frame"><img src="{img_uri(d["image"], ctx["base"])}"></div></div>'''
+
+
 def s_point(d, ctx, i):
     body = f'<p class="body" data-fit>{esc(d.get("body"))}</p>' if d.get("body") else ""
+    q = '<div class="q">“</div>' if d.get("quote") else ""
     return f'''<div class="slide s-accent point">{chrome(ctx, i)}
-<div class="region"><div class="q">“</div><h2 class="disp" data-fit>{esc(d["title"])}</h2>{body}</div></div>'''
+<div class="region">{q}<h2 class="disp" data-fit>{esc(d["title"])}</h2>{body}</div></div>'''
 
 
 def s_cta(d, ctx, i):
@@ -158,7 +181,7 @@ def s_cta(d, ctx, i):
 
 
 BUILDERS = {"cover": s_cover, "problem": s_problem, "feature": s_feature,
-            "steps": s_steps, "point": s_point, "cta": s_cta}
+            "steps": s_steps, "list": s_list, "photo": s_photo, "point": s_point, "cta": s_cta}
 
 # shrink [data-fit] text together until each .region fits (min 62%); report what happened
 FIT_JS = """() => {

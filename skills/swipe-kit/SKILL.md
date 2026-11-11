@@ -14,7 +14,7 @@ The design is fixed in `assets/template.css`. Your job is **planning the deck, w
 ### 1. Gather material
 Needed: product name, one-line description, audience, a concrete pain the audience has today, 2–3 key features, where the call to action points (link in bio, DM, a URL). Nice to have: brand color, Instagram handle, app screenshots.
 
-If it is already in the conversation or attached, do not ask again. Ask only for things you must not invent (the pain, the features, any offer like "free for 30 days"). Without a brand color, use the default (violet `#5B3DF5` + lime `#D4FF3A`) and say so.
+If it is already in the conversation or attached, do not ask again. Ask only for things you must not invent (the pain, the features, any offer like "free for 30 days"). Without a brand color, use the default (violet `#5B3DF5` + lime `#D4FF3A`) and say so. With a brand color, always choose an `accent` to go with it; the lime default belongs to the default violet only.
 
 ### 2. Plan the deck
 Default flow, 5–7 slides:
@@ -25,6 +25,14 @@ Default flow, 5–7 slides:
 4. `steps` or `point` — `steps` only for real sequences; `point` for a belief, principle or differentiator
 5. `cta` — one clear action
 
+That flow is for apps and software. Pick types by what the content is, not by the default:
+
+- **No app or screen** (a shop, a physical product, an event, a campaign, tips): skip `feature` and `problem`. Never invent an app UI or phone notifications for a business that has none.
+- **A set of facts** (prices, menu, hours, dates, options, what's included): `list`, with the figure in `value`.
+- **A real sequence, or a counted list** ("5 things to check"): `steps`, continuing the count on the next slide with `start`.
+- **The user attached a photo** (product, food, place, people): `photo`. Without one, do not use it.
+- Where and when (address, hours, dates) get their own `list` slide instead of being squeezed into the CTA subtitle.
+
 Surfaces alternate automatically by type (brand → dark → light → light → accent → brand). Avoid three light slides in a row; drop in a `point` or `problem` to break it up. Never exceed 10 slides.
 
 ### 3. Write the copy
@@ -34,7 +42,7 @@ Read `references/slide-types.md` for every field and its length limit. Principle
 - **Cut 30%** from your first draft. Carousels fail on word count far more than on design.
 - **Benefits, not features.** "See every renewal before it hits your card", not "Subscription tracking".
 - **Break headlines by hand** with `\n` at natural phrase boundaries.
-- **Emphasis:** wrap one word or short phrase per headline in `*asterisks*`. In English it becomes serif italic; in Korean, a marker underline. Use it on the word that carries the feeling, at most once per headline, not on every slide.
+- **Emphasis:** wrap one word or short phrase per headline in `*asterisks*`. In English it becomes serif italic; in Korean, an accent underline. Use it on the word that carries the feeling, at most once per headline, not on every slide.
 - **English:** sentence case, contractions welcome, short words. Avoid "revolutionary", "seamless", "unlock", "elevate", "game-changer", "next-level".
 - **Korean:** 해요체, write from the user's side, never strand a single particle on its own line.
 - **Never:** emoji, exclamation-mark stacks, invented numbers (user counts, ratings, savings) the user did not give you.

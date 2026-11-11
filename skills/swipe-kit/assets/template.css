@@ -95,6 +95,22 @@ mark{background:var(--accent);color:var(--on-accent);padding:0 .12em;border-radi
 .step b{font-size:42px;font-weight:700;letter-spacing:-0.02em;line-height:1.2;display:block}
 .step span{display:block;margin-top:10px;font-size:29px;color:var(--mut);line-height:1.4}
 
+/* list — unnumbered rows with an optional right-hand value (prices, hours, dates) */
+.list .region.top{top:150px;height:280px}
+.list h2{font-size:104px}
+.list .region.rows{top:470px;bottom:130px}
+.row{display:grid;grid-template-columns:1fr auto;column-gap:40px;align-items:baseline;border-top:3px solid var(--ink);padding:26px 0 22px;flex:none}
+.row b{font-size:42px;font-weight:700;letter-spacing:-0.02em;line-height:1.2;display:block}
+.row span{display:block;margin-top:10px;font-size:29px;color:var(--mut);line-height:1.4}
+.row .v{font-family:var(--display);font-weight:800;font-size:44px;letter-spacing:-0.03em;color:var(--brand);white-space:nowrap}
+
+/* photo — headline over one image card */
+.photo .region{top:150px;height:392px}
+.photo h2{font-size:104px}
+.photo .sub{margin-top:26px;font-size:32px;font-weight:500;color:var(--mut);line-height:1.4}
+.photo .frame{position:absolute;left:var(--side);right:var(--side);top:570px;bottom:130px;border-radius:44px;overflow:hidden}
+.photo .frame img{width:100%;height:100%;object-fit:cover;display:block}
+
 /* point — statement on accent */
 .point .region{top:200px;bottom:130px}
 .point .region>:first-child{margin-top:auto}.point .region>:last-child{margin-bottom:auto}
@@ -109,7 +125,8 @@ mark{background:var(--accent);color:var(--on-accent);padding:0 .12em;border-radi
 .cta .btn{position:absolute;left:var(--side);bottom:140px;background:var(--on-brand);color:var(--brand);font-size:40px;font-weight:700;padding:30px 52px;border-radius:999px;letter-spacing:-0.01em}
 .cta .sticker{right:80px;bottom:110px;transform:rotate(-10deg)}
 
-/* Korean: no Hangul serif italic, so emphasis becomes a marker underline */
+/* Korean: no Hangul serif italic, so emphasis becomes an accent underline */
 html[lang="ko"] .disp{letter-spacing:-0.03em;line-height:1.05}
-html[lang="ko"] .disp em{font-family:var(--display);font-style:normal;font-weight:800;font-size:1em;letter-spacing:inherit;background:linear-gradient(transparent 64%,var(--accent) 64%,var(--accent) 92%,transparent 92%)}
-html[lang="ko"] .s-accent .disp em{background:none;text-decoration:underline;text-decoration-thickness:.08em;text-underline-offset:.08em}
+html[lang="ko"] .disp em{font-family:var(--display);font-style:normal;font-weight:800;font-size:1em;letter-spacing:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:.1em;text-underline-offset:.1em;text-decoration-skip-ink:none}
+html[lang="ko"] .s-light .disp em{text-decoration-color:var(--brand)}
+html[lang="ko"] .s-accent .disp em{text-decoration-color:currentColor}
