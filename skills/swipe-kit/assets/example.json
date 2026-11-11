@@ -1,0 +1,26 @@
+{
+  "brand": {"name": "Orbit", "handle": "@orbit.money", "color": "#5B3DF5", "accent": "#D4FF3A"},
+  "slides": [
+    {"type": "cover", "kicker": "Introducing Orbit", "title": "Know where\nyour money\n*actually* goes.", "subtitle": "Every account, every subscription,\none calm dashboard.", "sticker": "Free for 30 days"},
+    {"type": "problem", "title": "Sound\n*familiar?*",
+     "notes": [{"label": "Netflix renewed", "sub": "$15.49 charged to Visa", "time": "now"},
+               {"label": "Low balance alert", "sub": "Checking is under $50", "time": "2h"},
+               {"label": "Gym membership", "sub": "Still paying. Last visit: March", "time": "1d"}],
+     "answer": "Orbit catches it before your bank does."},
+    {"type": "feature", "title": "All your\nsubscriptions,\n*one list.*", "subtitle": "Spot the ones you forgot about.",
+     "callout": "Cancel in one tap",
+     "screen": {"search": "Search subscriptions", "chips": ["Active", "Trials", "Paused"],
+                "items": [{"name": "Netflix", "meta": "Renews Nov 14", "badge": "$15.49"},
+                          {"name": "Spotify", "meta": "Renews Nov 20", "badge": "$11.99"},
+                          {"name": "Gym+", "meta": "Unused for 8 months", "badge": "$39.00"},
+                          {"name": "Cloud Drive", "meta": "Renews Dec 1", "badge": "$2.99"}]}},
+    {"type": "steps", "title": "Set up in\n*two minutes.*",
+     "steps": [{"title": "Connect your accounts", "desc": "Bank-level encryption, read-only access"},
+               {"title": "Let Orbit sort it out", "desc": "Spending and subscriptions, auto-tagged"},
+               {"title": "Get a weekly check-in", "desc": "One email. Only what changed."}]},
+    {"type": "point", "title": "Budgeting that\ndoesn't feel\nlike homework.", "body": "No spreadsheets, no categories to babysit.\nJust a clear picture, every week."},
+    {"type": "cta", "title": "Take back\nyour *month.*", "subtitle": "Try Orbit free for 30 days.", "button": "Link in bio →"}
+  ],
+  "caption": "Your money shouldn't be a mystery.\nOrbit puts every account and subscription in one calm dashboard, and tells you when something changes.\nTry it free for 30 days. Link in bio.",
+  "hashtags": ["personalfinance", "budgeting", "moneytips", "fintech", "orbitmoney"]
+}

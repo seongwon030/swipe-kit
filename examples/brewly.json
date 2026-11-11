@@ -1,0 +1,7 @@
+{"brand":{"name":"Brewly","handle":"@brewly.coffee","color":"#E4572E","accent":"#FFD1E8"},
+ "slides":[
+  {"type":"cover","kicker":"Coffee, delivered","title":"Your café\norder, *at home.*","subtitle":"Single-origin beans, roasted on Monday,\nat your door by Thursday.","sticker":"First bag free"},
+  {"type":"problem","title":"The morning\n*struggle.*","notes":[{"label":"Out of beans again","sub":"Store closes at 9","time":"7:02"},{"label":"Card charged $6.80","sub":"Oat flat white, extra shot","time":"8:15"}],"answer":"Brewly keeps your shelf stocked."},
+  {"type":"steps","title":"How it\n*works.*","steps":[{"title":"Take the taste quiz","desc":"Four questions, about a minute"},{"title":"We roast to order","desc":"Small batches, every Monday"},{"title":"Skip or swap anytime","desc":"No contracts, no guilt"}]},
+  {"type":"cta","title":"Better mornings\nstart *here.*","button":"Get your first bag →","sticker":"Free shipping"}],
+ "caption":"Café-quality coffee without the café line.\nTake the quiz and your first bag is on us. Link in bio.","hashtags":["coffee","specialtycoffee","homebrew","brewly"]}

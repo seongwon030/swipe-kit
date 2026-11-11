@@ -1,0 +1,7 @@
+{"brand":{"name":"Stride","handle":"@stride.run","color":"#111111","accent":"#C8FF00"},
+ "slides":[
+  {"type":"cover","kicker":"New in Stride","title":"Run your\n*first* 5K.","subtitle":"An 8-week plan that starts with walking.","sticker":"8 weeks"},
+  {"type":"feature","title":"A coach\nin your *ear.*","subtitle":"Real-time cues, paced to your breathing.","callout":"No more guessing","screen":{"search":"This week","chips":["Week 3","Easy","Intervals"],"items":[{"name":"Easy jog","meta":"Mon · 20 min","badge":"Done"},{"name":"Intervals","meta":"Wed · 24 min","badge":"Today"},{"name":"Long walk-run","meta":"Sat · 30 min","badge":"Sat"}]}},
+  {"type":"point","title":"Slow is\n*still* running.","body":"Every plan adapts to how your last run actually felt."},
+  {"type":"cta","title":"Lace up.\nWe'll do\nthe *rest.*","button":"Start free →"}],
+ "caption":"Never run before? Perfect.\nStride's 8-week plan takes you from your first walk to your first 5K. Link in bio.","hashtags":["running","couchto5k","runningmotivation","stride"]}
